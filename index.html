@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>무료 입장</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 썸네일(미리보기) 메타 -->
+  <meta property="og:title" content="🔥1월9일 급등주 공개! 지금 바로 확인하기" />
+  <meta property="og:description" content="무료 입장 마감 임박" />
+  <meta property="og:image" content="https://i.ibb.co/nsmFppyX/photo-2026-01-02-11-16-58.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- 폰트 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #00d4aa;
+      --primary-glow: rgba(0, 212, 170, 0.5);
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      background: #0a0f1a;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse at 30% 20%, rgba(0, 212, 170, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 80%, rgba(0, 150, 200, 0.1) 0%, transparent 50%);
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 24px;
+      max-width: 400px;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .proof {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      display: block;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    .cta {
+      display: inline-block;
+      width: 100%;
+      padding: 18px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 16px;
+      cursor: pointer;
+      color: #000;
+      background: linear-gradient(135deg, #00d4aa, #00f5c4);
+      box-shadow: 0 8px 32px rgba(0, 212, 170, 0.4);
+      text-decoration: none;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .countdown {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .countdown span {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .bar-wrap {
+      width: 120px;
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      margin: 16px auto 0;
+      overflow: hidden;
+    }
+
+    .bar {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 2px;
+      animation: loading 2s linear forwards;
+    }
+
+    @keyframes loading {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="container">
+  <img src="https://i.ibb.co/nsmFppyX/photo-2026-01-02-11-16-58.jpg" class="proof" alt="수익 인증" />
+
+  <h1 class="title">
+    <span class="highlight">무료 종목</span> 받으러 가기
+  </h1>
+  <p class="subtitle">텔레그램으로 이동합니다</p>
+
+  <a href="https://t.me/+PlzTlrX5psQ1Nzg1" class="cta">
+    지금 입장하기 →
+  </a>
+
+  <div class="countdown">
+    <span id="count">2</span>초 후 자동 이동
+  </div>
+  <div class="bar-wrap">
+    <div class="bar"></div>
+  </div>
+</div>
+
+<script>
+  const TELEGRAM_LINK = "https://t.me/+PlzTlrX5psQ1Nzg1";
+  let countdown = 2;
+
+  const timer = setInterval(() => {
+    countdown--;
+    document.getElementById("count").innerText = countdown;
+    if (countdown <= 0) {
+      clearInterval(timer);
+      window.location.href = TELEGRAM_LINK;
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
